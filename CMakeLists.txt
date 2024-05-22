@@ -1,8 +1,11 @@
 cmake_minimum_required(VERSION 3.2)
 project(data_structs)
+set(CMAKE_BUILD_TYPE Debug)
 
+# Add source files and create executable
 file(GLOB SOURCES src/*.cpp)
 add_executable(${PROJECT_NAME} ${SOURCES})
-target_include_directories(${PROJECT_NAME} PRIVATE "include")
-
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "ds")
+
+# Add header files
+target_include_directories(${PROJECT_NAME} PRIVATE "include")

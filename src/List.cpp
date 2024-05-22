@@ -12,8 +12,9 @@ List::List(int arr[], int size) {
 }
 
 List::~List() {
-	Node* tmp;
+	Node* tmp = head_;
 	while (head_ != nullptr) {
+		Node* n = tmp;
 		tmp = head_;
 		head_ = head_->next_;
 		delete tmp;
@@ -34,6 +35,9 @@ void List::InsertFront(int val) {
 }
 
 void List::RemoveFront() {
+	Node* tmp = head_;
+	head_ = head_->next_;
+	delete tmp;
 
 }
 
@@ -42,6 +46,6 @@ Node* List::Find(int val) {
 }
 
 void List::InsertAfter(int val, Node* n) {
-
+	return;
 }
 
