@@ -6,6 +6,7 @@ List::List() {
 }
 
 List::List(int arr[], int size) {
+	head_ = nullptr;
 	for (int i = size-1; i >= 0; i--) {
 		InsertFront(arr[i]);
 	}
